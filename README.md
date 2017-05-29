@@ -16,9 +16,9 @@
         <li>- gulp-uglify</li>
     </ul>
     
-3 Typography and grid<br>
-    - Libsass Compass Vertical Rhythm - typography;<br>
-    - Susy Grid - "умная" сетка; <br>
+3 Typography and grid:<br>
+        - Libsass Compass Vertical Rhythm - typography;<br>
+        - Susy Grid - "умная" сетка; <br>
 
 <h2>Старт проекта:</h2>
 
@@ -37,6 +37,6 @@
 	gulp
 	~~~
 4. Открываем в браузере 
-<pre>
+    <pre>
     <code>http://localhost:3400</code>
-</pre>
+    </pre>
