@@ -1,0 +1,21 @@
+@import "../node_modules/susy/sass/susy";
+@import "../node_modules/libsass-compass-vertical-rhythm/lib/compass_rhythm";
+
+//susy
+$susy: (
+  columns: 12,
+  gutters: 1/4,
+	container: 60em,
+	math: fluid,
+	output: float,
+	gutter-position: inside
+);
+
+/*
+  //Add container
+  @include container();
+
+  //Using Compass Vertical Rhythm
+  @include margin-trailer(1);
+  @include margin-leader(1);
+*/

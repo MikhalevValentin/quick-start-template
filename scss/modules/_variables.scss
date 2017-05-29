@@ -1,0 +1,45 @@
+@import './modules/_colors.scss';
+
+//base
+$baseFontFamily: "RobotoRegular", sans-serif;
+$baseFontSize: 16px;
+$baseLineHeight: 1.6;
+$baseFontColor: $baseBlack;
+
+//title
+$titleFontSize: 20px;
+
+//link
+$linkFontColor: $baseBlack;
+$linkFontColorHover: $colorGreen;
+
+//buttons
+$buttonDefaultBgColor: $colorWhite;
+$buttonDefaultBgColorHover: darken($buttonDefaultBgColor, 5%);
+$buttonDefaultBorder: 1px solid $colorWhite;
+$buttonDefaultBorderHover: 1px solid darken($buttonDefaultBgColor, 5%);
+$buttonDefaultTextColor: $colorBlack;
+
+$buttonPrimaryBgColor: $colorGreen;
+$buttonPrimaryBgColorHover: darken($buttonPrimaryBgColor, 5%);
+$buttonPrimaryBorder: 1px solid $colorGreen;
+$buttonPrimaryBorderHover: 1px solid darken($buttonPrimaryBgColor, 5%);
+$buttonPrimaryTextColor: $colorWhite;
+
+$buttonSecondaryBgColor: $colorBlue;
+$buttonSecondaryBgColorHover: darken($buttonSecondaryBgColor, 5%);
+$buttonSecondaryBorder: 1px solid $colorBlue;
+$buttonSecondaryBorderHover: 1px solid darken($buttonSecondaryBgColor, 5%);
+$buttonSecondaryTextColor: $colorWhite;
+
+$buttonAttentionBgColor: $colorYellow;
+$buttonAttentionBgColorHover: darken($buttonAttentionBgColor, 5%);
+$buttonAttentionBorder: 1px solid $colorYellow;
+$buttonAttentionBorderHover: 1px solid darken($buttonAttentionBgColor, 5%);
+$buttonAttentionTextColor: $colorBlack;
+
+$buttonWarningBgColor: $colorRed;
+$buttonWarningBgColorHover: darken($buttonWarningBgColor, 5%);
+$buttonWarningBorder: 1px solid $colorRed;
+$buttonWarningBorderHover: 1px solid darken($buttonWarningBgColor, 5%);
+$buttonWarningTextColor: $colorWhite;

@@ -1,0 +1,24 @@
+@import './modules/_colors.scss';
+@import './modules/_variables.scss';
+@import './modules/_mixins.scss';
+
+button {
+    &.button {
+        @include buttonDefault;
+        &--primary {
+            @include buttonPrimary;
+        }
+        &--secondary {
+            @include buttonSecondary;
+        }
+        &--attention {
+            @include buttonAttention;
+        }
+        &--warning {
+            @include buttonWarning;
+        }
+        &--large {
+            @include buttonLarge(12px, 18px);   //padding-top,-bottom and font-size
+        }
+    }
+}
