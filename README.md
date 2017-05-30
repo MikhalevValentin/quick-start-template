@@ -22,6 +22,22 @@
         <li>Susy Grid - "умная" сетка</li>
     </ul>
 
+4 Material SVG icons<br>
+    Инфо по способу подключения
+    ~~~
+    https://github.com/google/material-design-icons/tree/master/sprites
+    ~~~
+    Пример подлючения в html:
+    ~~~
+    <svg class="svg-24px">
+        <use xlink:href="libs/material-design-icons/svg-sprite/svg-sprite-action-symbol.svg#ic_accessibility_24px"></use>
+        <use class="check" xlink:href="MaterialIcons.svg#ic_check_box"></use>
+    </svg>
+    ~~~
+    в данном примере:
+    - svg-sprite-action-symbol.svg - svg файл из папки libs/material-design-icons/svg-sprite/
+    - #ic_accessibility_24px - id выбраной иконки.
+
 <h3>Старт проекта:</h3>
 
 1. Копируем репозиторий.

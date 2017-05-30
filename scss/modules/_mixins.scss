@@ -130,3 +130,36 @@
 	padding-top: $pt;
 	padding-bottom: $pt;
 }
+
+//checkbox
+@mixin checkbox() {
+    width: 24px;
+    height: 24px;
+}
+
+@mixin ckeckboxCustomBgColor($color) {
+    .checkbox-fill-color {
+        fill: $color;
+    }
+}
+
+@mixin mixinPrimaryColor {
+    .checkbox-fill-color {
+        fill: $colorGreen;
+    }
+}
+@mixin mixinSecondaryColor {
+    .checkbox-fill-color {
+        fill: $colorBlue;
+    }
+}
+@mixin mixinAttentionColor {
+    .checkbox-fill-color {
+        fill: $colorYellow;
+    }
+}
+@mixin mixinWarningColor {
+    .checkbox-fill-color {
+        fill: $colorRed;
+    }
+}

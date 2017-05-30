@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="ru"> <!--<![endif]-->
+<head>
+	<meta charset="UTF-8">
+	<title>custom-components</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="../app/css/fonts.css">
+	<link rel="stylesheet" href="../app/css/style.min.css">
+	<link rel="stylesheet" href="../app/libs/material-design-icons/svg-sprite/svg-sprite-toggle.css">
+	<script src="../app/libs/modernizr/modernizr.min.js"></script>
+</head>
+<body style="padding: 0 20px;">
+	<h3>Checkbox</h3>
+	<section style="margin: 10px auto; padding: 8px; background-color: #eee;">
+		
+		<div>Для замены цвета на любой другой:<br/> Задать для нового класса в блоке с .checkbox-custom цвет в миксине ckeckboxCustomBgColor, <br/>например @include ckeckboxCustomBgColor($colorGreen);
+		</div>
+		<div>
+			<div style="margin: 0px 0 3px">default</div>
+			<span class="checkbox-wrap">
+			    <label>
+			    	<input type="checkbox" class="checkbox-hidden">
+			    	<span class="checkbox-custom">
+			    		<i class="checkbox-custom--checked">
+			    			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" id="ic_check_box_24px"><path class="checkbox-fill-color" d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+			    		</i>
+			    		<i class="checkbox-custom--unchecked">
+			    			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" id="ic_check_box_outline_blank_24px" x="24"><path class="checkbox-fill-color" d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"/></svg>
+			    		</i>
+			    	</span>
+					<span class="checkbox-label">label</span>
+				</label>
+			</span>
+			<div style="margin: 10px 0 3px">primary</div>
+			<span class="checkbox-wrap">
+			    <label>
+			    	<input type="checkbox" class="checkbox-hidden">
+			    	<span class="checkbox-custom checkbox-primary">
+			    		<i class="checkbox-custom--checked">
+			    			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" id="ic_check_box_24px"><path class="checkbox-fill-color" d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+			    		</i>
+			    		<i class="checkbox-custom--unchecked">
+			    			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" id="ic_check_box_outline_blank_24px" x="24"><path class="checkbox-fill-color" d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"/></svg>
+			    		</i>
+			    	</span>
+					<span class="checkbox-label">label</span>
+				</label>
+			</span>
+			<div style="margin: 10px 0 3px">secondary</div>
+			<span class="checkbox-wrap">
+			    <label>
+			    	<input type="checkbox" class="checkbox-hidden">
+			    	<span class="checkbox-custom checkbox-secondary">
+			    		<i class="checkbox-custom--checked">
+			    			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" id="ic_check_box_24px"><path class="checkbox-fill-color" d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+			    		</i>
+			    		<i class="checkbox-custom--unchecked">
+			    			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" id="ic_check_box_outline_blank_24px" x="24"><path class="checkbox-fill-color" d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"/></svg>
+			    		</i>
+			    	</span>
+					<span class="checkbox-label">label</span>
+				</label>
+			</span>
+			<div style="margin: 10px 0 3px">attention</div>
+			<span class="checkbox-wrap">
+			    <label>
+			    	<input type="checkbox" class="checkbox-hidden">
+			    	<span class="checkbox-custom checkbox-attention">
+			    		<i class="checkbox-custom--checked">
+			    			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" id="ic_check_box_24px"><path class="checkbox-fill-color" d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+			    		</i>
+			    		<i class="checkbox-custom--unchecked">
+			    			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" id="ic_check_box_outline_blank_24px" x="24"><path class="checkbox-fill-color" d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"/></svg>
+			    		</i>
+			    	</span>
+					<span class="checkbox-label">label</span>
+				</label>
+			</span>
+			<div style="margin: 10px 0 3px">warning</div>
+			<span class="checkbox-wrap">
+			    <label>
+			    	<input type="checkbox" class="checkbox-hidden">
+			    	<span class="checkbox-custom checkbox-warning">
+			    		<i class="checkbox-custom--checked">
+			    			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" id="ic_check_box_24px"><path class="checkbox-fill-color" d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+			    		</i>
+			    		<i class="checkbox-custom--unchecked">
+			    			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" id="ic_check_box_outline_blank_24px" x="24"><path class="checkbox-fill-color" d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"/></svg>
+			    		</i>
+			    	</span>
+					<span class="checkbox-label">label</span>
+				</label>
+			</span>
+		</div>
+	</section>
+	<h3>Button</h3>
+	<section style="margin: 10px auto; padding: 8px; background-color: #eee;">
+		<div style="margin: 0px 0 3px">default</div>
+		<button type="button" class="button">button</button>
+		<div style="margin: 10px 0 3px">primary</div>
+	    <button type="button" class="button button--primary">button</button>
+	    <div style="margin: 10px 0 3px">secondary</div>
+	    <button type="button" class="button button--secondary">button</button>
+	    <div style="margin: 10px 0 3px">attention</div>
+	    <button type="button" class="button button--attention">button</button>
+	    <div style="margin: 10px 0 3px">warning</div>
+	    <button type="button" class="button button--warning">button</button>
+	    <div style="margin: 10px 0 3px">primary and large</div>
+	    <button type="button" class="button button--primary button--large">button</button>
+	</section>
+	<!--[if lt IE 9]>
+	<script src="../app/libs/libs/html5shiv/es5-shim.min.js"></script>
+	<script src="../app/libs/libs/html5shiv/html5shiv.min.js"></script>
+	<script src="../app/libs/libs/html5shiv/html5shiv-printshiv.min.js"></script>
+	<script src="../app/libs/libs/respond/respond.min.js"></script>
+	<![endif]-->
+</body>
+</html>

@@ -1,0 +1,53 @@
+@import './modules/_colors.scss';
+@import './modules/_variables.scss';
+@import './modules/_mixins.scss';
+
+.checkbox {
+    &-hidden {
+        display: none;
+    }
+    &-custom,
+    &-label {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    &-custom {
+        position: relative;
+        @include checkbox;
+        .checkbox-custom {
+            &--checked,
+            &--unchecked {
+                @include checkbox;
+            }
+            &--checked {
+                display: none;
+            }
+            &--unchecked {
+                display: block;
+            }
+        }
+        &.checkbox-primary {
+            @include mixinPrimaryColor;
+        }
+        &.checkbox-secondary {
+            @include mixinSecondaryColor;
+        }
+        &.checkbox-attention {
+            @include mixinAttentionColor;
+        }
+        &.checkbox-warning {
+            @include mixinWarningColor;
+        }
+    }
+    &-hidden:checked + .checkbox-custom {
+        .checkbox-custom {
+            &--checked {
+                display: block;
+            }
+            &--unchecked {
+                display: none;
+            }
+        }
+    }
+}
+
