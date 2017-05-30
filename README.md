@@ -23,12 +23,8 @@
     </ul>
 
 4 Material SVG icons<br>
-    Инфо по способу подключения
-    ~~~
-    https://github.com/google/material-design-icons/tree/master/sprites
-    ~~~
-    Пример подлючения в html:
-    ~~~
+    Инфо по способу подключения https://github.com/google/material-design-icons/tree/master/sprites
+    
     <svg class="svg-24px">
         <use xlink:href="libs/material-design-icons/svg-sprite/svg-sprite-action-symbol.svg#ic_accessibility_24px"></use>
         <use class="check" xlink:href="MaterialIcons.svg#ic_check_box"></use>
