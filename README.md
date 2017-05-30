@@ -1,5 +1,4 @@
-# <h3>Шаблон для быстрого старта проекта</h3><br>
-
+# <h4>Шаблон для быстрого старта проекта</h4><br>
 <h3>Что вошло в сборку:</h3>
 1 SASS - препроцессор;<br>
 2 Gulp - сборщик проектов;<br>
@@ -24,15 +23,6 @@
 
 4 Material SVG icons<br>
     Инфо по способу подключения https://github.com/google/material-design-icons/tree/master/sprites
-    
-    <svg class="svg-24px">
-        <use xlink:href="libs/material-design-icons/svg-sprite/svg-sprite-action-symbol.svg#ic_accessibility_24px"></use>
-        <use class="check" xlink:href="MaterialIcons.svg#ic_check_box"></use>
-    </svg>
-    ~~~
-    в данном примере:
-    - svg-sprite-action-symbol.svg - svg файл из папки libs/material-design-icons/svg-sprite/
-    - #ic_accessibility_24px - id выбраной иконки.
 
 <h3>Старт проекта:</h3>
 
@@ -51,6 +41,4 @@
 	gulp
 	~~~
 4. Открываем в браузере 
-    <pre>
-    <code>http://localhost:3400</code>
-    </pre>
+    <pre><code>http://localhost:3400</code></pre>

@@ -1,0 +1,59 @@
+@import './modules/_colors.scss';
+@import './modules/_variables.scss';
+@import './modules/_mixins.scss';
+
+input[type="radio"] {
+    &.radio-hidden {
+        display: none;
+        & + .radio-label .radio-item {
+            .radio-item {
+                &--checked {
+                    display: none;
+                }
+                &--unchecked {
+                    display: inline-block;
+                }
+            }
+        }
+
+        &:checked + .radio-label .radio-item {
+            .radio-item {
+                &--checked {
+                    display: inline-block;
+                }
+                &--uncheked {
+                    display: none;
+                }
+            }
+        }
+
+        & + .radio-label .radio-item,
+        &:checked + .radio-label .radio-item {
+            @include sizeMixin(24px, 24px);
+            @include inlineMixin;
+        }
+    }
+}
+
+.radio-item,
+.radio-label-item {
+    @include inlineMixin;
+}
+
+.radio-button {
+    &.radio-button {
+        &--primary {
+            @include mixinPrimaryColor;
+        }
+        &--secondary {
+            @include mixinSecondaryColor;
+        }
+        &--attention {
+            @include mixinAttentionColor;
+        }
+        &--warning {
+            @include mixinWarningColor;
+        }
+    }
+}
+

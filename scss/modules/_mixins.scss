@@ -16,6 +16,17 @@
 		color: $linkFontColorHover;
 	}
 }
+
+@mixin inlineMixin {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+@mixin sizeMixin($width, $height) {
+    width: $width;
+    height: $height;
+}
+
 //border-radius
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;
@@ -133,33 +144,32 @@
 
 //checkbox
 @mixin checkbox() {
-    width: 24px;
-    height: 24px;
+    @include sizeMixin(24px, 24px);
 }
 
 @mixin ckeckboxCustomBgColor($color) {
-    .checkbox-fill-color {
+    .fill-color {
         fill: $color;
     }
 }
 
 @mixin mixinPrimaryColor {
-    .checkbox-fill-color {
+    .fill-color {
         fill: $colorGreen;
     }
 }
 @mixin mixinSecondaryColor {
-    .checkbox-fill-color {
+    .fill-color {
         fill: $colorBlue;
     }
 }
 @mixin mixinAttentionColor {
-    .checkbox-fill-color {
+    .fill-color {
         fill: $colorYellow;
     }
 }
 @mixin mixinWarningColor {
-    .checkbox-fill-color {
+    .fill-color {
         fill: $colorRed;
     }
 }
