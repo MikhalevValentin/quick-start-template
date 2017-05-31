@@ -1,13 +1,15 @@
 @import './modules/_colors.scss';
 @import './modules/_variables.scss';
-
+//link
 @mixin link() {
 	text-decoration: none;
+    cursor: pointer;
 	&:hover,
 	&:focus {
 		text-decoration: none;
 	}
 }
+//linkDefault
 @mixin linkDefault() {
 	@include link();
 	color: $linkFontColor;
@@ -16,23 +18,50 @@
 		color: $linkFontColorHover;
 	}
 }
-
-@mixin inlineMixin {
-    display: inline-block;
-    vertical-align: middle;
+//linkCustomColor
+@mixin linkCustomColor($linkClr, $linkClrHover) {
+    @include link();
+    color: $linkClr;
+    &:hover,
+    &:focus {
+        color: $linkClrHover;
+    }
 }
-
+//inlineMixin
+@mixin inlineMixin($align) {
+    display: inline-block;
+    vertical-align: $align;
+}
+//sizeMixin
 @mixin sizeMixin($width, $height) {
     width: $width;
     height: $height;
 }
-
+//background
+@mixin backgroundMixin($imgpath,$position,$repeat) {
+    background: {
+        image: url($imgpath);
+        position: $position;
+        repeat: $repeat;
+    }
+}
+//v-center
+@mixin v-center {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
 //border-radius
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;
      -moz-border-radius: $radius;
       -ms-border-radius: $radius;
           border-radius: $radius;
+}
+//border
+@mixin borderSolidMixin($size, $clr, $radius) {
+    border: $size solid $clr;
+    @include border-radius($radius);
 }
 //box_shadow
 @mixin box_shadow ($level) {
@@ -146,30 +175,75 @@
 @mixin checkbox() {
     @include sizeMixin(24px, 24px);
 }
-
+//ckeckboxCustomBgColor
 @mixin ckeckboxCustomBgColor($color) {
     .fill-color {
         fill: $color;
     }
 }
-
+//mixinPrimaryColor
 @mixin mixinPrimaryColor {
     .fill-color {
         fill: $colorGreen;
     }
 }
+//mixinSecondaryColor
 @mixin mixinSecondaryColor {
     .fill-color {
         fill: $colorBlue;
     }
 }
+//mixinAttentionColor
 @mixin mixinAttentionColor {
     .fill-color {
         fill: $colorYellow;
     }
 }
+//mixinWarningColor
 @mixin mixinWarningColor {
     .fill-color {
         fill: $colorRed;
     }
+}
+
+/////////////////
+///grid mixins///
+/////////////////
+
+//Grid Container
+@mixin gridContainer($prop) {
+    display: $prop;             //grid or inline-grid
+}
+
+//Explicit Grid
+//repeat-rows
+@mixin repeat-rows($count, $size) {
+    grid-template-rows: repeat($count, $size);
+}
+//repeat-columns
+@mixin repeat-columns($count, $size) {
+    grid-template-columns: repeat($count, $size);
+}
+
+//grid-area
+@mixin grid-header {
+    grid-area: header;
+}
+@mixin grid-main {
+    grid-area: main;
+}
+@mixin grid-sidebar {
+    grid-area: sidebar;
+}
+@mixin grid-footer {
+    grid-area: footer;
+}
+@mixin grid-area($size) {
+    @include gridContainer(grid);
+    @include repeat-columns(4, $size);
+    grid-template-rows: auto 100vh auto;
+    grid-template-areas: 
+        "header header header header"
+        "main main main sidebar"
+        "footer footer footer footer"
 }

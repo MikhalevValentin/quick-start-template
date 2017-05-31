@@ -8,7 +8,7 @@
     }
     &-custom,
     &-label {
-        @include inlineMixin;
+        @include inlineMixin(middle);
     }
     &-custom {
         position: relative;

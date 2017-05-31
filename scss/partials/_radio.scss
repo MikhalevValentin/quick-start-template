@@ -30,14 +30,14 @@ input[type="radio"] {
         & + .radio-label .radio-item,
         &:checked + .radio-label .radio-item {
             @include sizeMixin(24px, 24px);
-            @include inlineMixin;
+            @include inlineMixin(middle);
         }
     }
 }
 
 .radio-item,
 .radio-label-item {
-    @include inlineMixin;
+    @include inlineMixin(middle);
 }
 
 .radio-button {
