@@ -228,7 +228,7 @@ $imagedir:'../img/';
     grid-template-columns: repeat($count, $size);
 }
 
-//grid-area
+//mixin grid-two-sidebar
 @mixin grid-header {
     grid-area: header;
 }
@@ -238,15 +238,74 @@ $imagedir:'../img/';
 @mixin grid-sidebar {
     grid-area: sidebar;
 }
+@mixin grid-sidebar-left {
+    grid-area: left;
+}
+@mixin grid-sidebar-right {
+    grid-area: right;
+}
 @mixin grid-footer {
     grid-area: footer;
 }
-@mixin grid-area($size) {
+@mixin grid-two-sidebar($min-width-SidebarLeft, $min-width-SidebarRight, $min-height-header, $min-height-footer) {
+
+    .page__header { @include grid-header }
+    .page__footer { @include grid-footer }
+    .page__main { @include grid-main }
+    .page__aside--left { @include grid-sidebar-left }
+    .page__aside--right { @include grid-sidebar-right }
+
     @include gridContainer(grid);
-    @include repeat-columns(4, $size);
-    grid-template-rows: auto 100vh auto;
-    grid-template-areas:
-        "header header header header"
-        "main main main sidebar"
-        "footer footer footer footer"
+    grid-template-areas: "header header header"
+                         "left main right"
+                         "footer footer footer";
+    grid-template-columns: minmax($min-width-SidebarLeft, auto) 1fr minmax($min-width-SidebarRight, auto);
+    grid-template-rows: minmax($min-height-header, auto)
+                        1fr
+                        minmax($min-height-footer, auto);
+    min-height: 100vh;
+
+    @media screen and (max-width: 768px) {
+        grid-template-areas: "header"
+                            "left"
+                            "main"
+                            "right"
+                            "footer";
+        grid-template-columns: 100%;
+        grid-template-rows: minmax(auto, auto)
+                            minmax(auto, auto)
+                            1fr
+                            minmax(auto, auto)
+                            minmax(auto, auto);
+    }
+}
+
+//mixin grid-one-sidebar
+@mixin grid-one-sidebar($min-width-Sidebar, $min-height-header, $min-height-footer) {
+    .page__header { @include grid-header }
+    .page__footer { @include grid-footer }
+    .page__main { @include grid-main }
+    .page__aside { @include grid-sidebar }
+
+    @include gridContainer(grid);
+    grid-template-areas: "header header"
+                         "main sidebar"
+                         "footer footer";
+    grid-template-columns: 1fr minmax($min-width-Sidebar, auto);
+    grid-template-rows: minmax($min-height-header, auto)
+                        1fr
+                        minmax($min-height-footer, auto);
+    min-height: 100vh;
+
+    @media screen and (max-width: 768px) {
+        grid-template-areas: "header"
+                            "sidebar"
+                            "main"
+                            "footer";
+        grid-template-columns: 100%;
+        grid-template-rows: minmax(auto, auto)
+                            minmax(auto, auto)
+                            1fr
+                            minmax(auto, auto);
+    }
 }
