@@ -54,7 +54,7 @@ gulp.task('html', function () {
 gulp.task('open', function(){
   var options = {
     uri: 'localhost:3400',
-    app: 'chrome'
+    app: 'firefox'
   };
   gulp.src('app/index.html')
   .pipe(open(options));

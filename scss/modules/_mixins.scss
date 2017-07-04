@@ -38,9 +38,12 @@
     height: $height;
 }
 //background
-@mixin backgroundMixin($imgpath,$position,$repeat) {
+$imagedir:'../img/';
+
+@mixin backgroundMixin($imgpath,$repeat: no-repeat,$position: 0 0) {
     background: {
-        image: url($imgpath);
+        color: transparent;
+        image: url(#{$imagedir}#{$imgpath});
         position: $position;
         repeat: $repeat;
     }
@@ -242,7 +245,7 @@
     @include gridContainer(grid);
     @include repeat-columns(4, $size);
     grid-template-rows: auto 100vh auto;
-    grid-template-areas: 
+    grid-template-areas:
         "header header header header"
         "main main main sidebar"
         "footer footer footer footer"

@@ -18,4 +18,7 @@ $susy: (
   //Using Compass Vertical Rhythm
   @include margin-trailer(1);
   @include margin-leader(1);
+
+  //susy grid columns
+  @include span(n) n - num columns
 */
