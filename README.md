@@ -8,7 +8,7 @@
         <li>gulp-concat-css</li>
         <li>gulp-livereload</li>
         <li>gulp-connect</li>
-        <li>gulp-minify-css</li>
+        <li>gulp-clean-css</li>
         <li>gulp-notify</li>
         <li>gulp-rename</li>
         <li>gulp-sass</li>

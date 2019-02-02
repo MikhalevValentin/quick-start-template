@@ -9,7 +9,7 @@ var livereload = require('gulp-livereload');
 var connect = require('gulp-connect');
 var sass = require('gulp-sass');
 var uglify = require('gulp-uglify');
-var minifyCSS = require('gulp-minify-css');
+var cleanCSS = require('gulp-clean-css');
 var open = require('gulp-open');
 
 //server connect
@@ -26,7 +26,7 @@ gulp.task('css', function () {
     return gulp.src('scss/**/*.scss')
         .pipe(sass())
         .pipe(prefix('last 25 versions'))
-        .pipe(minifyCSS())
+        .pipe(cleanCSS())
         .pipe(rename('style.min.css'))
         .pipe(gulp.dest('app/css'))
         .pipe(notify("CSS compile OK!"))
